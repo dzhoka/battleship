@@ -1,12 +1,12 @@
-﻿using System;
-
-namespace battleship
+﻿namespace battleship
 {
     class MainClass
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IConsole console = new GameConsole();
+            Game game = new Game(8, console);
+            game.Play();
         }
     }
 }
